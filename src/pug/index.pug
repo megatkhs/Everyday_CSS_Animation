@@ -1,0 +1,24 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width,initial-scale=1.0")
+    title エブリデイ CSS アニメーション
+    - let css = ['./assets/css/style.css']
+    each key in css
+      link(rel="stylesheet",href= key)
+    <script src="https://use.typekit.net/wgb6ujy.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  body
+    header
+      h1 エブリデイ CSS アニメーション
+      p 1日1個 CSSアニメーションを追加していきます
+    main
+      section
+        h2 リンクアニメーション
+        div.container
+          .item
+            section.link_huwa
+              h3 フワッてなるやつ
+              a(href='#', onclick='void()') link
+    script(src='./assets/js/script.js')
