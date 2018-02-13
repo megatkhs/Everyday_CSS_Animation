@@ -82,6 +82,7 @@ div.container div.item {
   min-width: 250px;
   flex-grow: 1;
   width: 30%;
+  margin: 10px;
 }
 
 div.container div.item section {
@@ -110,14 +111,21 @@ div.container div.item section h3 {
 }
 
 div.container div.item section a {
-  color: #ff9900;
-}
-
-div.container div.item .link_huwa a {
   transition: 600ms;
+  color: #ff9900;
 }
 
 div.container div.item .link_huwa a:hover {
   transform: translateY(-4px);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+div.container div.item .link_boyoyon a:hover {
+  animation: link_boyoyon 600ms;
+}
+
+@keyframes link_boyoyon {
+  30% {
+    transform: scaleX(1.9) scaleY(0.4) translateY(50%);
+  }
 }
