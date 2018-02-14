@@ -129,3 +129,20 @@ div.container div.item .link_boyoyon a:hover {
     transform: scaleX(1.9) scaleY(0.4) translateY(50%);
   }
 }
+
+div.container div.item .link_beko a {
+  transition: initial;
+}
+
+div.container div.item .link_beko a:hover {
+  animation: link_beko 600ms;
+}
+
+@keyframes link_beko {
+  30% {
+    transform: scale(0.5);
+  }
+  90% {
+    transform: scale(1);
+  }
+}

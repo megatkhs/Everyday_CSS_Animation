@@ -130,10 +130,22 @@ div.container {
     .link_boyoyon a {
 
       &:hover {
-          animation: link_boyoyon 600ms;
+        animation: link_boyoyon 600ms;
       }
       @keyframes link_boyoyon {
         30% { transform: scaleX(1.9) scaleY(0.4) translateY(50%) }
+      }
+    }
+
+    .link_beko a {
+      transition: initial;
+
+      &:hover {
+        animation: link_beko 600ms;
+      }
+      @keyframes link_beko {
+        30% { transform: scale(0.5) }
+        90% { transform: scale(1) }
       }
     }
   }
