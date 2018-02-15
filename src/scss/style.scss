@@ -118,36 +118,54 @@ div.container {
         color: $theme-main-anchor;
       }
     }
+  }
+}
 
-    .link_huwa a {
+.link {
+  .huwa a {
     
-      &:hover {
-        transform: translateY(-4px);
-        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      }
+    &:hover {
+      transform: translateY(-4px);
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
+  }
 
-    .link_boyoyon a {
+  .boyoyon a {
 
-      &:hover {
-        animation: link_boyoyon 600ms;
-      }
-      @keyframes link_boyoyon {
-        30% { transform: scaleX(1.9) scaleY(0.4) translateY(50%) }
-      }
+    &:hover {
+      animation: boyoyon 600ms;
     }
+    @keyframes boyoyon {
+      30% { transform: scaleX(1.9) scaleY(0.4) translateY(50%) }
+    }
+  }
 
-    .link_beko a {
-      transition: initial;
+  .beko a {
+    transition: initial;
 
-      &:hover {
-        animation: link_beko 600ms;
-      }
-      @keyframes link_beko {
-        30% { transform: scale(0.5) }
-        90% { transform: scale(1) }
-      }
+    &:hover {
+      animation: beko 600ms;
+    }
+    @keyframes beko {
+      30% { transform: scale(0.5) }
+      90% { transform: scale(1) }
     }
   }
 }
 
+.button {
+  a {
+    width: 200px;
+    height: 50px;
+    line-height: 44px;
+    border: solid 1px $theme-main-anchor;
+    text-decoration: none;
+  }
+
+  .colored a {
+    &:hover {
+      color: #fefefe;
+      background-color: $theme-main-anchor;
+    }
+  }
+}

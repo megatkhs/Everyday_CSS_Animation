@@ -115,34 +115,47 @@ div.container div.item section a {
   color: #ff9900;
 }
 
-div.container div.item .link_huwa a:hover {
+.link .huwa a:hover {
   transform: translateY(-4px);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-div.container div.item .link_boyoyon a:hover {
-  animation: link_boyoyon 600ms;
+.link .boyoyon a:hover {
+  animation: boyoyon 600ms;
 }
 
-@keyframes link_boyoyon {
+@keyframes boyoyon {
   30% {
     transform: scaleX(1.9) scaleY(0.4) translateY(50%);
   }
 }
 
-div.container div.item .link_beko a {
+.link .beko a {
   transition: initial;
 }
 
-div.container div.item .link_beko a:hover {
-  animation: link_beko 600ms;
+.link .beko a:hover {
+  animation: beko 600ms;
 }
 
-@keyframes link_beko {
+@keyframes beko {
   30% {
     transform: scale(0.5);
   }
   90% {
     transform: scale(1);
   }
+}
+
+.button a {
+  width: 200px;
+  height: 50px;
+  line-height: 44px;
+  border: solid 1px #ff9900;
+  text-decoration: none;
+}
+
+.button .colored a:hover {
+  color: #fefefe;
+  background-color: #ff9900;
 }
