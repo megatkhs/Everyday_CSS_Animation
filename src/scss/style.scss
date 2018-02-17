@@ -160,12 +160,79 @@ div.container {
     line-height: 44px;
     border: solid 1px $theme-main-anchor;
     text-decoration: none;
+    
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      transition: 600ms;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      transition: 600ms;
+    }
   }
 
   .colored a {
     &:hover {
       color: #fefefe;
       background-color: $theme-main-anchor;
+    }
+  }
+  
+  .huwa a {
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .blockanime_1 a {
+    position: relative;
+
+    &:before {
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+      background-color: $theme-main-anchor;
+      opacity: .2;
+    }
+    &:after {
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+      background-color: $theme-main-anchor;
+      opacity: .2;
+    }
+    &:hover {
+      
+      &:before {
+        animation: blockanime_1 1s ease 0s;
+      }
+      &:after {
+        animation: blockanime_1 1s ease 200ms;
+      }
+      @keyframes blockanime_1 {
+        50% {
+          width: 100%;
+          left: 0;
+        }
+        51% {
+          width: 100%;
+          left: initial;
+        }
+        100% {
+          left: initial;
+        }
+      }
     }
   }
 }

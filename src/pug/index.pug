@@ -14,11 +14,34 @@ html(lang='ja')
       h1 エブリデイ CSS アニメーション
       p 1日1個 CSSアニメーションを追加していきます
     main
-      section
+      section.link
         h2 リンクアニメーション
         div.container
           .item
-            section.link_huwa
+            section.huwa
               h3 フワッてなるやつ
               a(href='#', onclick='void()') link
+          .item
+            section.boyoyon
+              h3 ぼよよん
+              a(href='#', onclick='void()') link
+          .item
+            section.beko
+              h3 べこっ
+              a(href='#', onclick='void()') link
+      section.button
+        h2 ボタンアニメーション
+        div.container
+          .item
+            section.colored
+              h3 色が変わるやつ
+              a(href='#', onclick='void()') button
+          .item
+            section.huwa
+              h3 フワッてなるやつ
+              a(href='#', onclick='void()') button
+          .item
+            section.blockanime_1
+              h3 べろべろ
+              a(href='#', onclick='void()') button
     script(src='./assets/js/script.js')

@@ -155,7 +155,72 @@ div.container div.item section a {
   text-decoration: none;
 }
 
+.button a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  transition: 600ms;
+}
+
+.button a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  transition: 600ms;
+}
+
 .button .colored a:hover {
   color: #fefefe;
   background-color: #ff9900;
+}
+
+.button .huwa a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button .blockanime_1 a {
+  position: relative;
+}
+
+.button .blockanime_1 a:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ff9900;
+  opacity: .2;
+}
+
+.button .blockanime_1 a:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ff9900;
+  opacity: .2;
+}
+
+.button .blockanime_1 a:hover:before {
+  animation: blockanime_1 1s ease 0s;
+}
+
+.button .blockanime_1 a:hover:after {
+  animation: blockanime_1 1s ease 200ms;
+}
+
+@keyframes blockanime_1 {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  51% {
+    width: 100%;
+    left: initial;
+  }
+  100% {
+    left: initial;
+  }
 }
