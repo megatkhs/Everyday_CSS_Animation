@@ -4,7 +4,7 @@ html(lang='ja')
     meta(charset="utf-8")
     meta(name="viewport",content="width=device-width,initial-scale=1.0")
     title エブリデイ CSS アニメーション
-    - let css = ['./assets/css/style.css']
+    - let css = ['https://use.fontawesome.com/releases/v5.0.6/css/all.css','./assets/css/style.css']
     each key in css
       link(rel="stylesheet",href= key)
     <script src="https://use.typekit.net/wgb6ujy.js"></script>
@@ -43,5 +43,9 @@ html(lang='ja')
           .item
             section.blockanime_1
               h3 べろべろ
+              a(href='#', onclick='void()') button
+          .item
+            section.arrow_fadein
+              h3 矢印が出てくる
               a(href='#', onclick='void()') button
     script(src='./assets/js/script.js')
