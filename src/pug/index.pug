@@ -4,7 +4,7 @@ html(lang='ja')
     meta(charset="utf-8")
     meta(name="viewport",content="width=device-width,initial-scale=1.0")
     title エブリデイ CSS アニメーション
-    - let css = ['https://use.fontawesome.com/releases/v5.0.6/css/all.css','./assets/css/style.css']
+    - let css = ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css','./assets/css/style.css']
     each key in css
       link(rel="stylesheet",href= key)
     <script src="https://use.typekit.net/wgb6ujy.js"></script>
@@ -20,32 +20,36 @@ html(lang='ja')
           .item
             section.huwa
               h3 フワッてなるやつ
-              a(href='#', onclick='void()') link
+              a(href='#') link
           .item
             section.boyoyon
               h3 ぼよよん
-              a(href='#', onclick='void()') link
+              a(href='#') link
           .item
             section.beko
               h3 べこっ
-              a(href='#', onclick='void()') link
+              a(href='#') link
       section.button
         h2 ボタンアニメーション
         div.container
           .item
             section.colored
               h3 色が変わるやつ
-              a(href='#', onclick='void()') button
+              a(href='#') button
           .item
             section.huwa
               h3 フワッてなるやつ
-              a(href='#', onclick='void()') button
+              a(href='#') button
           .item
             section.blockanime_1
               h3 べろべろ
-              a(href='#', onclick='void()') button
+              a(href='#') button
           .item
             section.arrow_fadein
               h3 矢印が出てくる
-              a(href='#', onclick='void()') button
+              a(href='#') button
+          .item
+            section.slash_anime
+              h3 横から出る
+              a(href='#') button
     script(src='./assets/js/script.js')

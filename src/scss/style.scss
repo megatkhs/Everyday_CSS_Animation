@@ -51,7 +51,7 @@ main {
   position: relative;
   border-radius: 2px;
   transform-style: preserve-3d;
-  -webkit-perspective: 3000;
+  perspective: 3000px;
 
 
   &:before {
@@ -157,18 +157,12 @@ div.container {
   a {
     width: 200px;
     height: 50px;
-    line-height: 44px;
+    line-height: 48px;
     border: solid 1px $theme-main-anchor;
     text-decoration: none;
     
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      transition: 600ms;
-    }
-    &:after {
+    &:before ,&:after {
       content: '';
       display: block;
       position: absolute;
@@ -241,8 +235,8 @@ div.container {
     overflow: hidden;
 
     &:after {
+      font-family: FontAwesome;
       content: '\f061';
-      font-family: 'FontAwesome';
       height: 100%;
       width: 48px;
       line-height: 48px;
@@ -259,6 +253,37 @@ div.container {
         transform: translateX(0);
       }
 
+    }
+  }
+
+  .slash_anime a {
+    position: relative;
+    overflow: hidden;
+    &:before, &:after {
+      opacity: 0;
+      width: 60px;
+      height: 100px;
+      top: 50%;
+      background-color: $theme-main-anchor;
+    }
+    &:before {
+      left: 0;
+      transform: translate(-100%, -50%) rotate(0);
+    }
+    &:after {
+      right: 0;
+      transform: translate(100%, -50%) rotate(0);
+    }
+    &:hover {
+      &:before, &:after {
+        opacity: 1;
+      }
+      &:before {
+        transform: translate(-50%, -50%) rotate(25deg);
+      }
+      &:after {
+        transform: translate(50%, -50%) rotate(25deg);
+      }
     }
   }
 }
