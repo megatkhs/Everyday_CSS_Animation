@@ -161,7 +161,6 @@ div.container {
     border: solid 1px $theme-main-anchor;
     text-decoration: none;
     
-
     &:before ,&:after {
       content: '';
       display: block;
@@ -284,6 +283,28 @@ div.container {
       &:after {
         transform: translate(50%, -50%) rotate(25deg);
       }
+    }
+  }
+  .fadeout_fadein a {
+    span {
+      transition: 600s;
+    }
+    &:hover {
+      border-color: indianred;
+      span {
+        @for $i from 1 through 6 {
+          &:nth-of-type(#{$i}) {
+            animation: fadeout_fadein 600ms ease $i*100ms both;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    @keyframes fadeout_fadein {
+      0%{transform: translateY(0)}
+      50%{transform: translateY(10px);opacity: 0;color:$theme-main-anchor}
+      51%{transform: translateY(-10px)}
+      100%{color: indianred}
     }
   }
 }

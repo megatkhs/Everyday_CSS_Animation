@@ -19,3 +19,18 @@ for( let target of targets )
 //     t.appendChild(span[i])
 //   }
 // }
+
+// .spaningするやつ
+const spaning_target = document.getElementsByClassName('spaning')
+
+for ( let target of spaning_target ) {
+  // 構造的に2番目の要素がボタンであるため
+  const t = target.children[1]
+  const value = t.innerText
+  const valAry = value.split('')
+  console.log(valAry)
+  for ( let i = 0; i < valAry.length; i++ )
+    valAry[i] = '<span>' + valAry[i] + '</span>'
+  const str = valAry.join('')
+  t.innerHTML = str
+}

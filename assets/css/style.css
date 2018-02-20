@@ -278,3 +278,58 @@ div.container div.item section a {
 .button .slash_anime a:hover:after {
   transform: translate(50%, -50%) rotate(25deg);
 }
+
+.button .fadeout_fadein a span {
+  transition: 600s;
+}
+
+.button .fadeout_fadein a:hover {
+  border-color: indianred;
+}
+
+.button .fadeout_fadein a:hover span:nth-of-type(1) {
+  animation: fadeout_fadein 600ms ease 100ms both;
+  display: inline-block;
+}
+
+.button .fadeout_fadein a:hover span:nth-of-type(2) {
+  animation: fadeout_fadein 600ms ease 200ms both;
+  display: inline-block;
+}
+
+.button .fadeout_fadein a:hover span:nth-of-type(3) {
+  animation: fadeout_fadein 600ms ease 300ms both;
+  display: inline-block;
+}
+
+.button .fadeout_fadein a:hover span:nth-of-type(4) {
+  animation: fadeout_fadein 600ms ease 400ms both;
+  display: inline-block;
+}
+
+.button .fadeout_fadein a:hover span:nth-of-type(5) {
+  animation: fadeout_fadein 600ms ease 500ms both;
+  display: inline-block;
+}
+
+.button .fadeout_fadein a:hover span:nth-of-type(6) {
+  animation: fadeout_fadein 600ms ease 600ms both;
+  display: inline-block;
+}
+
+@keyframes fadeout_fadein {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0;
+    color: #ff9900;
+  }
+  51% {
+    transform: translateY(-10px);
+  }
+  100% {
+    color: indianred;
+  }
+}
