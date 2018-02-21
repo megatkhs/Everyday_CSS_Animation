@@ -333,3 +333,38 @@ div.container div.item section a {
     color: indianred;
   }
 }
+
+.button .underline a {
+  position: relative;
+}
+
+.button .underline a:after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  background-color: #ff9900;
+}
+
+.button .underline a:hover:after {
+  animation: underline 800ms ease;
+}
+
+@keyframes underline {
+  30% {
+    width: 100%;
+    left: 0;
+  }
+  69% {
+    width: 100%;
+    left: 0;
+  }
+  70% {
+    width: 100%;
+    left: initial;
+  }
+  100% {
+    left: initial;
+  }
+}
