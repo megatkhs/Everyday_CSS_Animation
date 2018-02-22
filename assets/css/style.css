@@ -368,3 +368,36 @@ div.container div.item section a {
     left: initial;
   }
 }
+
+.button .blend a {
+  position: relative;
+  background-color: #fafafa;
+}
+
+.button .blend a:after, .button .blend a:before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -10;
+  border: solid 1px #ff9900;
+}
+
+.button .blend a:after {
+  background-color: #ff9900;
+}
+
+.button .blend a:hover {
+  background-color: #fafafa;
+}
+
+.button .blend a:hover:after {
+  opacity: 1;
+  transform: translate(-5px, 3px);
+}
+
+.button .blend a:hover:before {
+  opacity: 1;
+  transform: translate(3px, -5px);
+}
