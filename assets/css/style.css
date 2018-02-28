@@ -111,8 +111,11 @@ div.flexcontainer div.item section h3 {
 }
 
 div.flexcontainer div.item section a {
-  transition: 600ms;
   color: #ff9900;
+}
+
+.link a {
+  transition: 600ms;
 }
 
 .link .huwa a:hover {
@@ -153,6 +156,7 @@ div.flexcontainer div.item section a {
   line-height: 48px;
   border: solid 1px #ff9900;
   text-decoration: none;
+  transition: 600ms;
 }
 
 .button a:before, .button a:after {
@@ -549,5 +553,34 @@ div.flexcontainer div.item section a {
     width: 100%;
     left: 0;
     transform: translate(0, 0);
+  }
+}
+
+.menu .down a:hover {
+  line-height: 28px;
+}
+
+.menu .down a:hover:after {
+  height: 2px;
+  width: 30%;
+}
+
+.menu .scaleupdown a:hover {
+  animation: scaleupdown 600ms forwards;
+}
+
+.menu .scaleupdown a:hover:after {
+  animation: scaleupdownline 500ms forwards;
+}
+
+@keyframes scaleupdown {
+  0% {
+    transform: scale(2);
+  }
+}
+
+@keyframes scaleupdownline {
+  0% {
+    width: 0;
   }
 }

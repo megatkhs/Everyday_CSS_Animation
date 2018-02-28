@@ -114,7 +114,6 @@ div.flexcontainer {
         line-height: 15px;
       }
       a {
-        transition: 600ms;
         color: $theme-main-anchor;
       }
     }
@@ -122,6 +121,9 @@ div.flexcontainer {
 }
 
 .link {
+  a {
+    transition: 600ms;
+  }
   .huwa a {
     
     &:hover {
@@ -160,6 +162,7 @@ div.flexcontainer {
     line-height: 48px;
     border: solid 1px $theme-main-anchor;
     text-decoration: none;
+    transition: 600ms;
     
     &:before ,&:after {
       content: '';
@@ -483,6 +486,33 @@ div.flexcontainer {
       30%{width: 0; left: 100%; transform: translate(-100%, 0)}
       50%{width: 0; left: 0; transform: translate(0, 0)}
       100%{width: 100%; left: 0; transform: translate(0, 0)}
+    }
+  }
+  .down a {
+
+    &:hover {
+      line-height: 28px;
+      &:after {
+        height: 2px;
+        width: 30%;
+      }
+    }
+  }
+  .scaleupdown a {
+
+    &:hover {
+      animation: scaleupdown 600ms forwards;
+      &:after {
+        animation: scaleupdownline 500ms forwards;
+      }
+    }
+    @keyframes scaleupdown {
+      0%{transform: scale(2);}
+    }
+    @keyframes scaleupdownline {
+      0%{
+        width: 0;
+      }
     }
   }
 }
